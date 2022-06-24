@@ -84,14 +84,11 @@ def attach_file(msg, filepath):                             # Функция п�
 
 spis=[]
 # чтение файла с почтами дял рассылок
-with open("school.txt") as file_handler:
+with open("pochts.txt") as file_handler:
     for line in file_handler:
-        x=line.replace('В', '')
-        x=x.replace('\xa0', '')
-
         x=x.replace(' ', '')
-        x=x.strip()
-        x=x.split(";")
+        
+        
         for i in x:
             if "@" in i:
                 spis+=[i]
