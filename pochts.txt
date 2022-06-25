@@ -1,6 +1,4 @@
-fdji3fidf@mail.ru
-fdfid4f@yandex.ru
-fdfid5f@yandex.ru
-fdfidf@yandex.ru
-fdf5dfidf@yandex.ru
-fdfi7df@yandex.ru
+test1@mail.ru
+test2@yandex.ru
+test3@yandex.ru
+#.....
