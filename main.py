@@ -12,9 +12,7 @@ from email.mime.audio import MIMEAudio                      # Аудио
 from email.mime.multipart import MIMEMultipart              # Многокомпонентный объект
 import numpy as np
 import time
-addr_from = "------------------"
-addr_to = "------------"
-password = "-------"  # пароль от почты addr_from
+
 
 def send_email(addr_to, msg_subj, msg_text, files,addr_from,password,servers,ports):
     
@@ -139,29 +137,37 @@ for i in range(3,len(spis),4):
 
 
         print(hjk,"Отправлено",spis[i-3],"кем",poshts[0] )
-        send_email(spis[i - 3], "Резюме", pismo, files, poshts[0], passws[0],servers[0],ports[0])
+        send_email(spis[i - 3], "Тема", pismo, files, poshts[0], passws[0],servers[0],ports[0])
 
-
-        x = randint(0, 1)
+	x=randint(0, 1)
+	c=randint(0, 1)
+	d=randint(0, 1)
+	e=randint(0, 1)
         time.sleep(randint(15, 40))
         hjk += 1
 
         print(hjk, "Отправлено", spis[i-2], "кем", poshts[1])
-        send_email(spis[i - 2], "Резюме", pismo, files, poshts[1], passws[1],servers[1],ports[1])
+        send_email(spis[i - 2], "Тема", pismo, files, poshts[1], passws[1],servers[1],ports[1])
 
-        x = randint(0, 1)
+	x=randint(0, 1)
+	c=randint(0, 1)
+	d=randint(0, 1)
+	e=randint(0, 1)
         time.sleep(randint(15, 50))
         hjk += 1
 
         print(hjk, "Отправлено", spis[i-1], "кем", poshts[2])
-        send_email(spis[i - 1], "Резюме", pismo, files, poshts[2], passws[2],servers[2],ports[2])
+        send_email(spis[i - 1], "Тема", pismo, files, poshts[2], passws[2],servers[2],ports[2])
 
-        x = randint(0, 1)
+        x=randint(0, 1)
+	c=randint(0, 1)
+	d=randint(0, 1)
+	e=randint(0, 1)
         time.sleep(randint(15, 50))
         hjk += 1
 
         print(hjk, "Отправлено", spis[i], "кем", poshts[3])
-        send_email(spis[i], "Резюме", pismo, files, poshts[3], passws[3],servers[3],ports[3])
+        send_email(spis[i], "Тема", pismo, files, poshts[3], passws[3],servers[3],ports[3])
     except smtplib.SMTPRecipientsRefused as e:
         print(e)
         time.sleep(50)
