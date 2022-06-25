@@ -111,7 +111,7 @@ ports= [--------,  ------------,  --------,    ------------]   #Порт(465)
 files = ["file.docs"]
 
                                                         
-hjk=0
+number=0
 
 
 for i in range(3,len(spis),4):
@@ -133,10 +133,10 @@ for i in range(3,len(spis),4):
 		 \nМы заинтересованы в д{fals1[e]}лг{fals1[d]}срочном взаимовыгодном партнерстве и готовы представить Вашему вниманию низкие цены и высокое качество обслуживания.
 	         \nБуду рад сот{fals[d]}удничать, жду Ваш {fals[x]}твет в ближайшее время. \n\n\nРук{fals1[e]}водитель ______________."""
         print(spis[i-3])
-        hjk += 1
+        number += 1
 
 
-        print(hjk,"Отправлено",spis[i-3],"кем",poshts[0] )
+        print(number,"Отправлено",spis[i-3],"кем",poshts[0] )
         send_email(spis[i - 3], "Тема", pismo, files, poshts[0], passws[0],servers[0],ports[0])
 
 	x=randint(0, 1)
@@ -144,9 +144,9 @@ for i in range(3,len(spis),4):
 	d=randint(0, 1)
 	e=randint(0, 1)
         time.sleep(randint(15, 40))
-        hjk += 1
+        number += 1
 
-        print(hjk, "Отправлено", spis[i-2], "кем", poshts[1])
+        print(number, "Отправлено", spis[i-2], "кем", poshts[1])
         send_email(spis[i - 2], "Тема", pismo, files, poshts[1], passws[1],servers[1],ports[1])
 
 	x=randint(0, 1)
@@ -154,9 +154,9 @@ for i in range(3,len(spis),4):
 	d=randint(0, 1)
 	e=randint(0, 1)
         time.sleep(randint(15, 50))
-        hjk += 1
+        number += 1
 
-        print(hjk, "Отправлено", spis[i-1], "кем", poshts[2])
+        print(number, "Отправлено", spis[i-1], "кем", poshts[2])
         send_email(spis[i - 1], "Тема", pismo, files, poshts[2], passws[2],servers[2],ports[2])
 
         x=randint(0, 1)
@@ -164,9 +164,9 @@ for i in range(3,len(spis),4):
 	d=randint(0, 1)
 	e=randint(0, 1)
         time.sleep(randint(15, 50))
-        hjk += 1
+        number += 1
 
-        print(hjk, "Отправлено", spis[i], "кем", poshts[3])
+        print(number, "Отправлено", spis[i], "кем", poshts[3])
         send_email(spis[i], "Тема", pismo, files, poshts[3], passws[3],servers[3],ports[3])
     except smtplib.SMTPRecipientsRefused as e:
         print(e)
